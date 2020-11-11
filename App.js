@@ -1,14 +1,13 @@
 import React from 'react';
 import Loading from './loading';
 import * as Location from 'expo-location';
-import { Alert } from 'react-native';
-
+import { Alert, LogBox } from 'react-native';
 
 export default class extends React.Component {
   state = {
     isLoading: true,
   };
-
+  
   getLocation = async () => {
     try {
       await Location.requestPermissionsAsync();
