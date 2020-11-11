@@ -1,10 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import Loading from './loading';
+import * as Location from 'expo-location';
+import { Alert } from 'react-native';
 
-export default function App() {
-  return (
-    <Loading />
-  );
+
+export default class extends React.Component {
+  state = {
+    isLoading: true,
+  };
+
+  getLocation = async () => {
+    try {
+      await Location.requestPermissionsAsync();
+      const { coords: { latitude, longitude } } = await Location.getCurrentPositionAsync();
+      this.setState({ isLoading: false });
+    } catch (err) {
+      Alert.alert('위치 정보를 불러올 수 없습니다.', '옵션에서 권한을 허용해주세요.');
+    }
+  }
+
+  componentDidMount() {
+    this.getLocation();
+  }
+
+  render() {
+    const { isLoading } = this.state;
+    return isLoading ? <Loading /> : null;
+
+
+  }
 }
