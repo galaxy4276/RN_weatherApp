@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from './loading';
+import Loading from './Loading';
 import Weather from './Weather';
 import * as Location from 'expo-location';
 import { Alert, Text } from 'react-native';

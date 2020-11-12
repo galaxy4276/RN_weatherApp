@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fokin-galaxy4276",
-    "slug": "fokin-galaxy4276",
+    "name": "fokin-weather-galaxy4276",
+    "slug": "fokin-weather",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
