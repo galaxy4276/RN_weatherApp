@@ -6,7 +6,7 @@ const Loading = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>날씨 정보를</Text>
-      <Text style={styles.text}>산뜻하게 불러오는 중입니다..</Text>
+      <Text style={styles.text}>산뜻하게 불러오는 중입니다  ..</Text>
     </View>
   );
 };
